@@ -89,9 +89,9 @@ ul li a:hover {
 }
 
 .intro_container {
-    min-height: 120vh;
+    min-height: 100vh;
     margin: auto;
-    padding: 1rem 2.5rem;
+    padding: 1rem 10rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -144,8 +144,8 @@ ul li a:hover {
 }
 
 .profile_picture img {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 100%;
 }
 
