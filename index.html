@@ -43,9 +43,11 @@
                 <img src="./img/profilPic.jpg">
             </div>
         </div>
-
+        <div id="scroll-up">
+            <a href="#">top</a>
+        </div>
         <div class="body_of_work" id="project">
-            <h2><span>Body of work</span></h2>
+            <h2>Body of work</h2>
             <div class="bow_container">
                 <div class="ptext">
                     <p class="description">A website that gives you a review of 4 games from each of the 4 platforms
@@ -72,15 +74,25 @@
         </div>
     </div>
 
-    <footer>
+    <div class="footer">
         <div class="footer_button" id="footer">
-            <a href="#">Gmail</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Github</a>
-            <a href="#">Scroll to top</a>
+            <p><a href="#">Gmail</a></p>
+            <p><a href="#">LinkedIn</a></p>
+            <p><a href="#">Github</a></p>
         </div>
-    </footer>
+    </div>
 
+    <script>
+        let scrollup = document.getElementById("scroll-up");
+        window.onscroll = function() {scroll()};
+        function scroll() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollup.style.display = "block";
+            } else {
+                scrollup.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
