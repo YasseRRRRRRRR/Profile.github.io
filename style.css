@@ -91,7 +91,7 @@ ul li a:hover {
 .intro_container {
     min-height: 120vh;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
