@@ -1,0 +1,6 @@
+make the Intoducytion smaller and more conscice and make it the only place with background color pink 
+
+get rid of the weird lines
+
+
+
