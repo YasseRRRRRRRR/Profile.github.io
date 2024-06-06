@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-Beige text-dPurple relative `}>
+      <body className={`${inter.className} bg-bgPurple text-dPurple relative `}>
         <Header />
         {/* <header className="z-[999] relative">
           <div

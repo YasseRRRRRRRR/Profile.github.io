@@ -11,6 +11,7 @@ module.exports = {
         dPurple: "var(--Dark-Purple)",
         lPurple: "var(--Light-Purple)",
         Beige: "var(--Beige)",
+        bgPurple: "var(--Lighter-Purple)",
       },
     },
   },
