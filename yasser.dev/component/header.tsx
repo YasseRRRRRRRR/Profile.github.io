@@ -3,8 +3,13 @@ import React from "react";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/activeContextSection";
 
 export default function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -16,26 +21,39 @@ export default function Header() {
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center"
+              className="h-3/4 flex items-center justify-center relative"
               key={link.hash}
               initial={{ y: -200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className="flex w=full items-center justify-center p-3 hover:text-purple-950 transition ease-in"
+                className={clsx(
+                  "flex w=full items-center justify-center p-3 hover:text-purple-950 transition ease-in",
+                  {
+                    "text-Beige hover:text-Beige": activeSection === link.name,
+                  }
+                )}
                 href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
+                {link.name === activeSection && (
+                  <motion.span
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                    className="bg-dPurple rounded-full absolute inset-0 -z-10"
+                  ></motion.span>
+                )}
                 {link.name}
               </Link>
             </motion.li>
           ))}
-          {/* {links.map((link) => {
-            return (
-              <li key={link.hash}>
-                <Link href={link.hash}>{link.name}</Link>
-              </li>
-            );
-          })} */}
         </ul>
       </nav>
     </header>
