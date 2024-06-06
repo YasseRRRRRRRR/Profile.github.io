@@ -1,7 +1,12 @@
 import React from "react";
 import Intro from "@/component/intro";
-import SevctionDivider from "@/component/sevctionDivider";
+import SevctionDivider from "@/component/sectionDivider";
 import About from "@/component/about";
+import Projects from "@/component/projects";
+import Sectiontitles from "@/utils/sectiontitles";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
@@ -39,6 +44,18 @@ export default function Home() {
         </p>
       </section> */}
       <About />
+      <SevctionDivider />
+      <Projects />
+      {/* <section>
+        <Sectiontitles>My projects</Sectiontitles>
+        <div className="projecx">
+          {projectsData.map((project, index) => (
+            <React.Fragment key={index}>
+              <SingleProject {...project} />
+            </React.Fragment>
+          ))}
+        </div>
+      </section> */}
       <SevctionDivider />
     </main>
   );

@@ -12,6 +12,7 @@ module.exports = {
         lPurple: "var(--Light-Purple)",
         Beige: "var(--Beige)",
         bgPurple: "var(--Lighter-Purple)",
+        bgCards: "var(--Card-Background)",
       },
     },
   },
