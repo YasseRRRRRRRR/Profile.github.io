@@ -1,11 +1,18 @@
 import "./App.css";
 import Header from "./components/header";
+import HeroSection from "./components/heroSection";
+import Contact from "./components/contact";
+import Projects from "./components/projects";
+import Experience from "./components/experience";
 
 function App() {
   return (
     <>
       <Header />
-      <h1 className="text-3xl font-bold text-LPurple">Hello world!</h1>
+      <HeroSection />
+      <Projects />
+      <Experience />
+      <Contact />
     </>
   );
 }
