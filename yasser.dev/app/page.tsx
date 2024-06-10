@@ -15,7 +15,7 @@ import Projects from "@/component/projects";
 // import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
-  // const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("Home");
 
   return (
     <>
@@ -54,10 +54,13 @@ export default function Home() {
           </ul>
         </nav>
       </header> */}
+
       <main className="flex flex-col items-center justify-center">
         <Intro />
+
         <SevctionDivider />
         <About />
+
         <SevctionDivider />
         <Projects />
         <SevctionDivider />
